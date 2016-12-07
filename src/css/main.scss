@@ -1,0 +1,35 @@
+
+html,body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.cf::before{
+  content: '';
+  display: table;
+  clear: both
+}
+.cf::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+  .left {
+    width: 50%;
+    float: left;
+    textarea {
+      width: 500px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .right{
+    width: 50%;
+    height: auto;
+    float: left;
+  }
+}
