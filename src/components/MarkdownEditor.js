@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 require('../css/main.scss');
 var marked = require('marked');
-
+var abc = '123';
 //编辑组件
 var Editor = React.createClass({
     handleChange: function(e){
@@ -14,8 +14,7 @@ var Editor = React.createClass({
     },
     render:function(){
         return (
-          <textarea  rows = '28' onChange = {this.handleChange}>
-              {this.props.val}
+          <textarea  rows = '28' onChange = {this.handleChange} value = {this.props.val}>
           </textarea>
         );
     }
@@ -25,9 +24,7 @@ var Editor = React.createClass({
 var ShowBlock = React.createClass({
   render:function(){
     return (
-      <div className = 'right'>
-          <span dangerouslySetInnerHTML={{__html:this.props.val}} />
-      </div>
+      <span dangerouslySetInnerHTML={{__html:this.props.val}} />
     )
   }
 });

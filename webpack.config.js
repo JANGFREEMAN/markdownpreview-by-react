@@ -1,25 +1,29 @@
 var webpack = require('webpack');
 var path = require('path');
 module.exports = {
-  entry: [
-    'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
-    './src/index.js'
-  ],
+  // entry: [
+  //   'webpack/hot/dev-server',
+  //   'webpack-dev-server/client?http://localhost:8080',
+  //   './src/index.js'
+  // ],
+  entry: './src/index.js',
   output: {
-    path: path.join(__dirname, '/dist/assets'),
+    path:  './dist/assets',
     filename: 'bundle.js',
-    publicpath: './assets'
+    publicPath:'assets'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  // plugins: [
+  //   new webpack.HotModuleReplacementPlugin()
+  // ],
+  devServer:{
+        contentBase:'./dist'
+    },
   module: {
     loaders:[
       {
         test: /\.js[x]?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader?presets[]=es2015&presets[]=react'
+        loaders: ["react-hot", "babel-loader?presets[]=es2015&presets[]=react"]
       },
       {
         test: /\.css$/,
