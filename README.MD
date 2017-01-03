@@ -1,5 +1,5 @@
 ## 在线显示地址
-http://www.zhangyx92.com/markdownpreview-by-react/index.html
+https://jangfreeman.github.io/markdownpreview-by-react/index.html
 
 ## 安装教程
 1. npm install
